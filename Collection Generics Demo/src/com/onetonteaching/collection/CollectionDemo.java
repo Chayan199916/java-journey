@@ -1,5 +1,16 @@
 package com.onetonteaching.collection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
 //import java.util.ArrayList;
 //import java.util.Collection;
 //import java.util.Collections;
@@ -67,11 +78,44 @@ public class CollectionDemo {
 //		b. when inserting value in the middle is concern, linkedlist works faster coz of pointer manipulation, no need of shifting.
 //		c. when fetching value is concern, arraylist works faster coz of indexing 
 		
+		// Set Demo
+		
+//		Set<Integer> mySet = new HashSet<>(); // fetching order is random
+//		Set<Integer> mySet = new TreeSet<>(); // fetching is done in sorted manner
+//		System.out.println(mySet.add(45));
+//		System.out.println(mySet.add(10));
+//		System.out.println(mySet.add(54));
+//		System.out.println(mySet.add(90));
+//		System.out.println(mySet.add(45)); // duplicate element; returns false
+//		
+//		mySet.forEach(System.out::println);
 		
 		
+		// Map Demo (Directed non-weighted graph representation)
 		
+//		Map<Integer, List<Integer>> graph = new HashMap<>(); // not thread safe, faster
+//		Map<Integer, List<Integer>> graph = new Hashtable<>(); // thread safe, slower
+//		Map<Integer, List<Integer>> graph = new TreeMap<>(); // in sorted order
+//		
+//		graph.put(1, new ArrayList<>(Arrays.asList(2, 3)));
+//		graph.put(2, new ArrayList<>(Arrays.asList(3, 4)));
+//		graph.put(3, new ArrayList<>(Arrays.asList(4)));
 		
+//		Set<Integer> vertices = graph.keySet();
+//		
+//		for(int vertex : vertices) {
+//			
+//			System.out.println(vertex + "-> " + graph.get(vertex));
+//			
+//		}
 		
+//		Set<Map.Entry<Integer, List<Integer>>> valuesEntries = graph.entrySet();
+//		
+//		for(Map.Entry<Integer, List<Integer>> value : valuesEntries) {
+//			
+//			System.out.println(value.getKey() + "-> " + value.getValue());
+//			
+//		}
 		
 	}
 
