@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 
@@ -95,39 +96,64 @@ public class Main {
 		
 //		Map, filter, reduce - java 8 functional programming approach
 		
-//		System.out.println(list.stream().map(i -> i * 3).reduce(Integer :: sum).orElse(0)); // example returns 135 ; using lambda expression 
+//		System.out.println(list.stream().map(i -> i * 3).reduce(Integer :: sum).orElse(0)); // example1 returns 135 ; using stream api functions
+//		System.out.println(list.stream().filter(i -> i % 2 == 0).reduce(0, (c, e) -> c + e)); // example2 returns 20 ; using stream api functions
 		
-////		Internal working 
+////		Internal working of example1
 		
-		Stream<Integer> stream = list.stream(); // converts list into stream
+//		Stream<Integer> stream = list.stream(); // converts list into stream
+//		
+//		Function<Integer, Integer> function = new Function<Integer, Integer>() { // anonymous class definition 
+//
+//			@Override
+//			public Integer apply(Integer t) {
+//				// TODO Auto-generated method stub
+//				return t * 3;
+//			}
+//			
+//		};
+//		
+//		Stream<Integer> stream1 = stream.map(function); // map takes object of Function interface (functional interface) ; this stream1 contains elements, generated after applying function
+//		
+//		BinaryOperator<Integer> binaryOperator = new BinaryOperator<Integer>() {
+//
+//			@Override
+//			public Integer apply(Integer t, Integer u) {
+//				
+//				// TODO Auto-generated method stub
+//				return t + u;
+//				
+//			}
+//		};
+//			
+//		int result = stream1.reduce(0, binaryOperator); // reduce takes object of BinaryOperator interface(functional interface); first parameter is identity value
+//		
+//		System.out.println(result); // returns 135 
+			
 		
-		Function<Integer, Integer> function = new Function<Integer, Integer>() { // anonymous class definition 
+////	Internal working of example2
+		
+//	Stream<Integer> stream = list.stream(); // converts list into stream
+//	
+//	Predicate<Integer> predicate = new Predicate<Integer>() {
+//
+//		@Override
+//		public boolean test(Integer t) {
+//			
+//			// TODO Auto-generated method stub
+//			return t % 2 == 0;
+//					
+//		}
+//		
+//	};
+//	
+//	Stream<Integer> stream1 = stream.filter(predicate); // filter takes object of Predicate interface (functional interface) ; this stream1 contains elements, generated after applying function
+//		
+//	int result = stream1.reduce(0, binaryOperator); // reduce takes object of BinaryOperator interface(functional interface); first parameter is identity value
+//	
+//	System.out.println(result); // returns 20
 
-			@Override
-			public Integer apply(Integer t) {
-				// TODO Auto-generated method stub
-				return t * 3;
-			}
-			
-		};
-		
-		Stream<Integer> stream1 = stream.map(function); // map takes object of Function interface (functional interface) ; this stream1 contains elements, generated after applying function
-		
-		BinaryOperator<Integer> binaryOperator = new BinaryOperator<Integer>() {
-
-			@Override
-			public Integer apply(Integer t, Integer u) {
-				
-				// TODO Auto-generated method stub
-				return t + u;
-				
-			}
-		};
-			
-		int result = stream1.reduce(0, binaryOperator); // reduce takes object of BinaryOperator interface(functional interface); first parameter is identity value
-		
-		System.out.println(result); // returns 135 
-			
+	
 		
 		
 	}
