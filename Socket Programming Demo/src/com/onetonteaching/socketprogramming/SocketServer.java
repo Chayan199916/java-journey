@@ -1,6 +1,8 @@
 package com.onetonteaching.socketprogramming;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -27,14 +29,22 @@ public class SocketServer {
 			Socket socket = serverSocket.accept();
 			System.out.println("Connection established...");
 			
-			BufferedReader bReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			String requeString = bReader.readLine();
+//			BufferedReader bReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//			String requeString = bReader.readLine();
+			
+			DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+			String requeString = (String)dataInputStream.readUTF();
 			System.out.println("Hi, " + requeString.split(" ")[2]);
 			
-			OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
-			PrintWriter printWriter = new PrintWriter(outputStreamWriter);
-			printWriter.println(meString);
-			outputStreamWriter.flush();
+//			OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+//			PrintWriter printWriter = new PrintWriter(outputStreamWriter);
+//			printWriter.println(meString);
+//			outputStreamWriter.flush();
+			
+			DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+			dataOutputStream.writeUTF(meString);
+			dataOutputStream.flush();
+			dataOutputStream.close();
 			
 			serverSocket.close();
 			
