@@ -1,12 +1,12 @@
 
 public class MarkerInterfaceDemo {
-    
+
     public static void main(String[] args) {
-        
+
         MyClass obj = new MyClass();
-        if(obj instanceof Demo){
+        if (obj instanceof Demo) {
             obj.show();
-        }else{
+        } else {
             System.out.println("You can't use this...");
         }
 
@@ -14,11 +14,12 @@ public class MarkerInterfaceDemo {
 
 }
 
-interface Demo{}  // Marker interface 
+interface Demo {
+} // Marker interface
 
-class MyClass{
+class MyClass implements Demo {
 
-    public void show(){
+    public void show() {
         System.out.println("Showing...");
     }
 

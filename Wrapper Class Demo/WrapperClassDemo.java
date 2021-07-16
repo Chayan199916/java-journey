@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class WrapperClassDemo {
 
     public static void main(String[] args) {
-        
+
         int i = 5, j;
         // Integer ii = i;
         Integer ii = Integer.valueOf(i); // wrapper class // (boxing) // j = ii (autoboxing)
@@ -19,10 +19,12 @@ public class WrapperClassDemo {
         arr.add(8);
         arr.add(9);
 
-        for(int k : arr){
-            System.out.println(k);
+        for (int k : arr) {
+            System.out.print(k + " ");
         }
+        System.out.println();
+        arr.forEach((ele) -> System.out.print(ele + " "));
 
     }
-    
+
 }

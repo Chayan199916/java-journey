@@ -1,0 +1,17 @@
+* client -> server -> web container (which stores all servlets( special type of java class file)) ->
+web.xml -> servlet-mapping -> service method;
+
+* inside service method either doGet or doPost is called depending on the method that has been used at client side;
+default one is doGet;
+
+* going from one servlet to another servlet (dispatching req from one servlet to another servlet);
+
+there are two ways : RequestDispatcher (here client or browser doesn't know who exactly sending response as same req and res objects being used) and Redirect (two diff (req,res) pairs are used. to send data session management is used);
+
+* sending data from one servlet to another servlet;
+
+we use session management
+we can also use req object to send data;
+
+* life cycle of a servlet:
+init -> service -> destroy

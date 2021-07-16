@@ -21,12 +21,12 @@ public class MultithreadingUsingRunnable {
 
 }
 
-class C implements Runnable{
-	
+class C implements Runnable {
+
 	public void run() {
-		
+
 		for (int i = 0; i < 5; i++) {
-			
+
 			System.out.println("Blah!");
 			try {
 				Thread.sleep(1000);
@@ -35,17 +35,17 @@ class C implements Runnable{
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
-	
+
 }
 
-class D implements Runnable{
-	
+class D implements Runnable {
+
 	public void run() {
-		
+
 		for (int i = 0; i < 5; i++) {
-			
+
 			System.out.println("Boom!");
 			try {
 				Thread.sleep(1000);
@@ -53,9 +53,9 @@ class D implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
-		
+
 	}
-	
+
 }
