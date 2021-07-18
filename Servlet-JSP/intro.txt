@@ -15,3 +15,22 @@ we can also use req object to send data;
 
 * life cycle of a servlet:
 init -> service -> destroy
+
+* RequestDispatcher vs sendirect
+
+https://stackoverflow.com/questions/2047122/requestdispatcher-forward-vs-httpservletresponse-sendredirect
+
+* Cookie management : 
+when for the first time client sends a req, server sends cookie with response object. next time when client sends another request, it sends the cookie again to make server remember that it had a connection before. so server accepts cookie and gets to remember client. It;s also possible that client having multiple cookies.
+
+* ServletContext
+
+used to store database location, file-path, username and password for logging in database etc. It's an object which will be shared between all the servlets.
+
+* ServletConfig
+
+If we want diff config for diff servlets then go for ServletConfig
+
+*ServletAnnotation Config
+Deployment descriptor or web.xml gives the mapping between url and servlet
+we can avoid xml handling and instead of xml, we can use annotation.
