@@ -16,7 +16,7 @@ we can also use req object to send data;
 * life cycle of a servlet:
 init -> service -> destroy
 
-* RequestDispatcher vs sendirect
+* RequestDispatcher vs sendRedirect
 
 https://stackoverflow.com/questions/2047122/requestdispatcher-forward-vs-httpservletresponse-sendredirect
 
@@ -34,3 +34,14 @@ If we want diff config for diff servlets then go for ServletConfig
 *ServletAnnotation Config
 Deployment descriptor or web.xml gives the mapping between url and servlet
 we can avoid xml handling and instead of xml, we can use annotation.
+
+* jsp
+
+tomcat is called servlet container. all jsp codes are converted to servlets. 
+there are 4 tags in jsp : 
+<% %> : scriptlet (all these codes go inside service method)
+<%= %> : expression (if we want to print something directly without using out.println())
+<%! %> : declaration (these codes go outside service method. var declaration, method etc)
+<%@ %> : directive (importing package ex: [<%@page import = "package name" %>])
+
+so if intention is to design a page, jsp is better but if intention is to process then servlet.
