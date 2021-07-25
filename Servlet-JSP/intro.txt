@@ -45,3 +45,9 @@ there are 4 tags in jsp :
 <%@ %> : directive (importing package ex: [<%@page import = "package name" %>])
 
 so if intention is to design a page, jsp is better but if intention is to process then servlet.
+
+* directives
+
+@page
+@include
+@taglib
