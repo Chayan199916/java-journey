@@ -51,3 +51,8 @@ so if intention is to design a page, jsp is better but if intention is to proces
 @page
 @include
 @taglib
+
+* filters
+
+let's say there are 3 servlets and some have some external features in common ex. log maintenance, transaction management, security etc. As they are common to more than one servlet, instead of implementing those inside servlets, we use filters.
+like servlets, filters are also java classes which extend special class. they are pluggable. they don't depend on each others. Filter chaining is a concept which calls next filter after one finishes it's job. at the end after all filters, servlet is called. all these filter chaining is done by tomcat server.
