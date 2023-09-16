@@ -34,7 +34,7 @@ public class AddServlet extends HttpServlet
 		int result = first + second;
 		
 		PrintWriter out = res.getWriter();
-//		out.println(first + second);
+		out.println(first + second);
 		
 		/*
 		 * Using ServletContext
