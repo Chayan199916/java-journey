@@ -11,10 +11,18 @@ public class ExceptionHandlingDemo {
 
         // int i = 5 / 0;
 
+        // // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // // br.close();
+
+        // System.out.println("I won't be executed because it has aready left this
+        // block");
+
         // } catch (ArithmeticException e) {
         // // TODO: handle exception
 
         // System.out.println("Can't divide by zero..");
+        // // e.printStackTrace();
 
         // } finally {
 
@@ -24,23 +32,27 @@ public class ExceptionHandlingDemo {
 
         // Try with resources
 
-        // try (BufferedReader br = new BufferedReader(new
-        // InputStreamReader(System.in))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 
-        // int num = Integer.parseInt(br.readLine());
-        // System.out.println(num);
+            int num = Integer.parseInt(br.readLine());
+            System.out.println(num);
 
-        // } catch (IOException e) {
-        // System.out.println(e);
-        // } catch (NumberFormatException e) {
-        // System.out.println(e);
-        // }
+        } catch (IOException e) {
+            System.out.println(e);
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
 
         // own exception handling
 
         try {
 
-            int i = 6;
+            int item = User input
+            if (item <= items * 5 / 100){
+                then i will allow
+            }else {
+                throw new 
+            }
             if (i > 0) {
 
                 throw new MyException("Max value can't cross zero!");

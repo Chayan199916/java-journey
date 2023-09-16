@@ -1,4 +1,3 @@
-
 // 1. Single abstract method
 // 2. Marker interface
 
